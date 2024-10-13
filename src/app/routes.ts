@@ -9,11 +9,6 @@ const routeConfig: Routes = [
         title: 'Home Page'
     },
     {
-        path: 'details',
-        component: DetailsComponent,
-        title: 'Details Page'
-    },
-    {
         path: 'details/:id',
         component: DetailsComponent,
         title: 'Details'

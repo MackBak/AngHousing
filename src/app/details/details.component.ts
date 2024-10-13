@@ -4,14 +4,12 @@ import { ActivatedRoute } from "@angular/router"; // TODO: Check what this is!
 import { HousingService } from "../housing.service";
 import { HousingLocation } from "../housing-location";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import {application} from "express"; //TODO: CHeck what this does!
 
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   template: `
-
     <article>
       <img class="listing-photo" [src]="housingLocation?.photo">
       <section class="listing-description">
@@ -40,12 +38,10 @@ import {application} from "express"; //TODO: CHeck what this does!
           <label for="email">Email</label>
           <input id="email" type="text" formControlName="email">
           <button type="submit" class="primary">Apply</button>
-          
         </form>
       </section>
       
     </article>
-
   `,
   styleUrls: ['./details.component.css']
 })
