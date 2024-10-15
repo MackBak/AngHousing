@@ -14,3 +14,13 @@ button.primary {
     color: white;
     border-radius: 8px;
 }
+
+button.primary:hover {
+    background-color: #f66767;
+    transform: scale(1.02);
+}
+
+button.primary:active {
+    background: #f59d9d;
+    transform: scale(0.8);
+}

@@ -24,6 +24,22 @@ button {
     border-radius: 8px;
 }
 
+.clearButton {
+    margin-left: 5px;
+    background-color: #00aeff;
+    border-color: #00aeff;
+}
+
+button.clearButton:hover {
+    background-color: #f66767;
+    transform: scale(1.02);
+}
+
+button.clearButton:active {
+    background: #f59d9d;
+    transform: scale(0.8);
+}
+
 @media (min-width: 500px) and (max-width: 768px) {
     .results {
         grid-template-columns: repeat(2, 1fr);

@@ -1,7 +1,8 @@
 <section>
-    <form>
-        <input type="text" placeholder="Filter by city" #filter />
+    <form (ngSubmit)="$event.preventDefault()">
+        <input type="text" placeholder="Filter by city" #filter (keydown.enter)="filterResults(filter.value)" />
         <button class="primary" type="button" (click)="filterResults(filter.value)">search</button>
+        <button class="clearButton" type="button" (click)="clearInput(filter)">Clear</button>
     </form>
 </section>
 
