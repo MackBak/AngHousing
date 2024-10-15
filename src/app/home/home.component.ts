@@ -10,19 +10,21 @@ import { HousingService } from "../housing.service";
     standalone: true,
     imports: [CommonModule, HousingLocationComponent] ,
     styleUrls: ['./home.component.css'],
-    template: `
-        
-    <section>
-        <form>
-            <input type="text" placeholder="Filter by city" #filter />
-            <button class="primary" type="button" (click)="filterResults(filter.value)">search</button>
-        </form>
-    </section>
-    
-    <section class="results">
-        <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
-        </section>
-    `,
+    templateUrl: './home.component.html',
+
+    // template: `
+    //
+    // <section>
+    //     <form>
+    //         <input type="text" placeholder="Filter by city" #filter />
+    //         <button class="primary" type="button" (click)="filterResults(filter.value)">search</button>
+    //     </form>
+    // </section>
+    //
+    // <section class="results">
+    //     <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+    //     </section>
+    // `,
 })
 
 export class HomeComponent {
