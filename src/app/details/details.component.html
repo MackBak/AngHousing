@@ -16,16 +16,26 @@
 
     <section class="listing-apply">
         <h2 class="section-heading">Apply to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <form [formGroup]="applyForm" (ngSubmit)="submitApplication()">
             <label for="first-name">First Name</label>
-            <input id="first-name" type="text" formControlName="firstName">
+            <input id="first-name" formControlName="firstName" />
+            <small class="error" *ngIf="applyForm.get('firstName')?.touched">
+                {{ getErrorMessage('firstName') }}
+            </small>
 
             <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" formControlName="lastName">
+            <input id="last-name" formControlName="lastName" />
+            <small class="error" *ngIf="applyForm.get('lastName')?.touched">
+                {{ getErrorMessage('lastName') }}
+            </small>
 
             <label for="email">Email</label>
-            <input id="email" type="text" formControlName="email">
-            <button type="submit" class="primary">Apply</button>
+            <input id="email" formControlName="email" />
+            <small class="error" *ngIf="applyForm.get('email')?.touched">
+                {{ getErrorMessage('email') }}
+            </small>
+
+            <button type="submit" [disabled]="applyForm.invalid" class="primary">Apply</button>
         </form>
     </section>
 

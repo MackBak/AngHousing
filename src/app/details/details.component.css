@@ -13,6 +13,14 @@
     margin-bottom: 15px;
 }
 
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .listing-location::before {
     content: url('/assets/location-pin.svg') / '';
 }
