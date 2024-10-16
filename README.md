@@ -18,8 +18,4 @@ To use:
   
   `npm install` 
 
-- Run the application & run the db.json:
-  
-  `ng serve`
-  
-  `json-server --watch db.json`
+- Run the application & visit localhost:4200
